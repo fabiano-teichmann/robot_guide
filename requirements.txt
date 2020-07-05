@@ -3,3 +3,4 @@ robotframework-faker
 robotframework-requests
 robotframework-jsonlibrary
 robotframework-rabbitmq
+robotframework-seleniumlibrary

@@ -23,13 +23,21 @@ First create virtual environment:
       pip install -r requirements.txt
       
  If you need run tests with Selenium is necessary install drive with example ChromeDriver or other browser you need
- ### Install ChromeDriver
+ ### For run test accept you need install ChromeDriver or other browser your preference 
 Download ChromeDriver in https://chromedriver.chromium.org/downloads,
 select based in your version Chrome and unzip file and move for /home/your_user/.local/bin
 
 ## 1.3 Run tests
 Always see if you virtual environment is activate for run robot.
-You can run all tests or one test for run this is command:
+You can run all tests or one test
+Example run one file:
+You need pass folder where robot save report, log and screenshot  for not overwrite other test recommend you use
+one folder specific for you test 
 
+    robot -d ./results/test_selenium tests/test_ecommerce_with_selenium.robot
+    robot -d ./results/variable tests/example_variables.robot  
+
+Example run all test
+    
     robot -d ./results test
 
