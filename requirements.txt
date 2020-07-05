@@ -1,0 +1,5 @@
+robotframework
+robotframework-faker
+robotframework-requests
+robotframework-jsonlibrary
+robotframework-rabbitmq
