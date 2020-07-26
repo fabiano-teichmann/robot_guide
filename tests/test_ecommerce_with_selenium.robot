@@ -38,12 +38,12 @@ Cenário 02: Pesquisar produto não existente
     Quando eu pesquisar pelo produto "Produto não existe"
     Então a página deve exibir a mensagem "No results were found for your search "Produto não existe""
 
-# Cenário 03: Listar Produtos
-#     Dado que estou na página home do site
-#     Quando passar o mouse na categoria "WOMEN"
-#     Então as sub categorias devem ser exibidas
-#     Quando clicar na sub categoria "${SUB_CATEGORIA}"
-#     Então uma página com os produtos da sub categoria "${SUB_CATEGORIA}" deve ser exibida
+Cenário 03: Listar Produtos
+    Dado que estou na página home do site
+    Quando passar o mouse na categoria "WOMEN"
+    Então as sub categorias devem ser exibidas
+    Quando clicar na sub categoria "${SUB_CATEGORIA}"
+    Então uma página com os produtos da sub categoria "${SUB_CATEGORIA}" deve ser exibida
 
 Cenário 04: Adicionar Produtos no Carrinho
     Dado que estou na página home do site
