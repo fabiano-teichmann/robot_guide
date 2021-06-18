@@ -234,3 +234,6 @@ pip-selfcheck.json
 .history
 results/
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm,virtualenv,visualstudiocode
+
+.DS_Store
+.DS_Store/

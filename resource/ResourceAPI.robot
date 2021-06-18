@@ -4,7 +4,7 @@ Library   RequestsLibrary
 Library   Collections
 
 *** Variables ***
-${URL}    https://fakerestapi.azurewebsites.net/api/
+${URL}    https://fakerestapi.azurewebsites.net/api/v1
 &{BOOK_1}   ID=1
 ...         Title=Book 1
 ...         Description=Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\r\n
@@ -70,20 +70,17 @@ Conferir se retornou uma lista com "${QTD_LIVROS}" livros
     Length Should Be    ${RESPOSTA.json()}  ${QTD_LIVROS}
 
 Conferir se retorna todos os dados corretos do livro 1
-    Dictionary Should Contain Item      ${RESPOSTA.json()}  ID  ${BOOK_1.ID}
-    Dictionary Should Contain Item      ${RESPOSTA.json()}  Title  ${BOOK_1.Title}
-    Dictionary Should Contain Item      ${RESPOSTA.json()}  Description  ${BOOK_1.Description}
-    Dictionary Should Contain Item      ${RESPOSTA.json()}  PageCount  ${BOOK_1.PageCount}
-    Dictionary Should Contain Item      ${RESPOSTA.json()}  Excerpt  ${BOOK_1.Excerpt}
-    Should Not Be Empty      ${RESPOSTA.json()["PublishDate"]}
+    Dictionary Should Contain Item      ${RESPOSTA.json()}  id  ${BOOK_1.ID}
+    Dictionary Should Contain Item      ${RESPOSTA.json()}  title  ${BOOK_1.Title}
+        
 
 Conferir se cadastrou o livro
-    Dictionary Should Contain Item      ${RESPOSTA.json()}  ID  ${NEW_BOOK.ID}
-    Dictionary Should Contain Item      ${RESPOSTA.json()}  Title  ${NEW_BOOK.Title}
-    Dictionary Should Contain Item      ${RESPOSTA.json()}  Description  ${NEW_BOOK.Description}
-    Dictionary Should Contain Item      ${RESPOSTA.json()}  PageCount  ${NEW_BOOK.PageCount}
-    Dictionary Should Contain Item      ${RESPOSTA.json()}  Excerpt  ${NEW_BOOK.Excerpt}
-    Should Not Be Empty      ${RESPOSTA.json()["PublishDate"]}
+    Dictionary Should Contain Item      ${RESPOSTA.json()}  id  ${NEW_BOOK.ID}
+    Dictionary Should Contain Item      ${RESPOSTA.json()}  title  ${NEW_BOOK.Title}
+    Dictionary Should Contain Item      ${RESPOSTA.json()}  description  ${NEW_BOOK.Description}
+    Dictionary Should Contain Item      ${RESPOSTA.json()}  pageCount  ${NEW_BOOK.PageCount}
+    Dictionary Should Contain Item      ${RESPOSTA.json()}  excerpt  ${NEW_BOOK.Excerpt}
+   
 
 
 Confere se a resposta e vazia
